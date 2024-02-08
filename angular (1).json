@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BootstrapDemo": {
+    "MEANX": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/bootstrap-demo",
+            "outputPath": "dist/meanx",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -26,14 +26,9 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -63,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "BootstrapDemo:build:production"
+              "buildTarget": "MEANX:build:production"
             },
             "development": {
-              "buildTarget": "BootstrapDemo:build:development"
+              "buildTarget": "MEANX:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "BootstrapDemo:build"
+            "buildTarget": "MEANX:build"
           }
         },
         "test": {
